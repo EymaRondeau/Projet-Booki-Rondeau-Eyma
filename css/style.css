@@ -321,10 +321,88 @@ a {
     box-sizing: border-box;
 }
 
+
 /****** Hebergements ***********/
+
 .hebergements {
-    width: 65%;
+    width: 65%; /* Largeur de 65% */
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+    flex-direction: column; /* Disposition en colonne */
+    gap: 30px; /* Espace entre les éléments */
 }
+
+.hebergements .section-title {
+    font-size: 22px; /* Taille de la police */
+}
+
+.hebergements .section-title:nth-child(3) {
+    font-size: 18px; /* Taille de la police pour le troisième enfant */
+}
+
+.hebergements-cards {
+    display: grid; /* Utilisation de Grid Layout pour la disposition */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); /* Trois colonnes flexibles */
+    gap: 30px; /* Espace entre les éléments */
+}
+
+.hebergements-card {
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+    flex-direction: column; /* Disposition en colonne */
+    background-color: white; /* Fond blanc */
+    border-radius: 20px; /* Coins arrondis de 20px */
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); /* Ombre portée */
+    transition: 0.2s ease-out; /* Transition douce */
+}
+
+.hebergements-card:hover {
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2); /* Ombre portée plus intense au survol */
+}
+
+.hebergements-cards img {
+    height: 124px; /* Hauteur des images */
+    padding: 4px; /* Padding de 4px */
+    border-top-left-radius: 20px; /* Coin supérieur gauche arrondi */
+    border-top-right-radius: 20px; /* Coin supérieur droit arrondi */
+    object-fit: cover; /* Redimensionne les images pour couvrir leur conteneur */
+    width: 100%; /* Largeur des images */
+}
+
+.hebergements-card-content {
+    padding-left: 12px; /* Padding à gauche de 12px */
+    margin-top: 4px; /* Marge supérieure de 4px */
+    margin-bottom: 15px; /* Marge inférieure de 15px */
+    height: 64.25px; /* Hauteur du contenu */
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+    flex-direction: column; /* Disposition en colonne */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+}
+
+.hebergements-card-title-name {
+    font-size: 16px; /* Taille de la police */
+}
+
+.hebergements-card-subtitle-name {
+    font-size: 14px; /* Taille de la police */
+}
+
+.hebergements-card-rating {
+    width: 81px; /* Largeur du conteneur de la note */
+    height: 13.25px; /* Hauteur du conteneur de la note */
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+    align-items: center; /* Centrer verticalement */
+    justify-content: flex-start; /* Aligner à gauche */
+}
+
+.hebergements-card-rating .fa-star {
+    font-size: 13.25px; /* Taille de l'icône */
+    width: 14.29px; /* Largeur de l'icône */
+}
+
+.section-title {
+    margin: 0; /* Supprime les marges par défaut */
+    font-size: 22px; /* Taille de la police */
+}
+
 
 /****** Populaires ***********/
 .populaires {
@@ -372,6 +450,49 @@ a {
 }
 
 
+/****** Activités ***********/
+
+.activities-marseille {
+    width: 100%; /* Largeur de 100% */
+    text-align: left; /* Alignement du texte à gauche */
+    margin-top: 20px; /* Marge supérieure de 20px */
+    margin-bottom: 60px; /* Marge inférieure de 60px */
+}
+
+.activities-marseille h2 {
+    font-size: 24px; /* Taille de la police */
+    color: #000000; /* Couleur du texte */
+    padding: 30px 0px 25px 30px; /* Padding en haut, en bas et à gauche */
+}
+
+.activity-cards {
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+    justify-content: space-around; /* Espacement égal entre les éléments */
+    gap: 10px; /* Espace entre les éléments */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+}
+
+.activity-card {
+    flex-basis: 22%; /* Largeur de base de 22% */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre portée */
+    border-radius: 20px; /* Coins arrondis de 20px */
+    overflow: hidden; /* Masque le dépassement du contenu */
+}
+
+.activity-card img {
+    width: 297.5px; /* Largeur des images */
+    height: 380px; /* Hauteur des images */
+    display: block; /* Affichage en bloc */
+}
+
+.activity-card p {
+    font-size: 16px; /* Taille de la police */
+    font-weight: 700; /* Poids de la police en gras */
+    color: #000000; /* Couleur du texte */
+    padding: 0px 0px 0px 20px; /* Padding à gauche de 20px */
+    margin-top: 15px; /* Marge supérieure de 15px */
+    margin-bottom: 15px; /* Marge inférieure de 15px */
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
